@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Warehouse Work Simplification</string>
+    <string name="login_header">Авторизация</string>
+    <string name="login_body">Для авторизации используются добавленные администратором почта и пароль. Для получения доступа свяжитесь с вашим администратором.</string>
+</resources>

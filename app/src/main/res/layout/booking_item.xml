@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:minHeight="50dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TextBlackUnconstrained"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="sampleNamesampleNamesampleNamesampleNamesampleNamesampleNamesampleName"
+        android:id="@+id/bookings_name"
+        android:maxWidth="180dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TextBlackUnconstrained"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="180dp"
+        android:id="@+id/bookings_quantity"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="5dp"
+        android:text="quantityquantityquantityquantityquantityquantityquantityquantityquantity"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

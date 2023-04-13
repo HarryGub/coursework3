@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.shifuu.aawws.mainactivity.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_schemeFragment"
+            app:destination="@id/schemeFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_bookingFragment"
+            app:destination="@id/bookingFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/schemeFragment"
+        android:name="com.shifuu.aawws.mainactivity.scheme.SchemeFragment"
+        android:label="fragment_scheme"
+        tools:layout="@layout/fragment_scheme" >
+        <action
+            android:id="@+id/action_schemeFragment_to_userFragment"
+            app:destination="@id/userFragment"
+            app:popUpTo="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.shifuu.aawws.mainactivity.user.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_userFragment_to_schemeFragment"
+            app:destination="@id/schemeFragment"
+            app:popUpTo="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookingFragment"
+        android:name="com.shifuu.aawws.mainactivity.booking.BookingFragment"
+        android:label="fragment_booking"
+        tools:layout="@layout/fragment_booking" >
+        <argument
+            android:name="item"
+            app:argType="com.shifuu.aawws.model.Item" />
+    </fragment>
+</navigation>
